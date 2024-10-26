@@ -180,10 +180,10 @@ events.on('contacts:submit', () => {
 		.catch((err) => {
 			console.error(err);
 		});
+	model.clearBasket();
 	page.render({
 		counter: model.getProducts().length,
 	});
-	model.clearBasket();
 });
 
 events.on('success:close', () => {
